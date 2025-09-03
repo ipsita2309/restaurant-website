@@ -51,5 +51,3 @@ The goal was to make the site **responsive, semantic, and accessible** while fol
 - Added `prefers-reduced-motion` support to disable animations for sensitive users.
 
 ---
-
-## 📂 Project Structure
