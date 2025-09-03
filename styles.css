@@ -1,0 +1,159 @@
+/* Basic reset and typography */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.left {
+  float: left;
+  justify-content: space-around;
+  width: 700px;
+}
+
+.right {
+  float: right;
+  justify-content: space-around;
+  width: 700px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: #0a5fff;
+  color: #fff;
+  padding: 8px;
+}
+
+/* Header, nav, footer */
+.site-header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.site-footer {
+  clear: both;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer {
+  clear: both;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links a:focus-visible {
+  outline: 3px solid #ffd700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+input, textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+.btn {
+  background: #0a5fff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Thank you actions */
+.thankyou-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Icons */
+h2::before, .nav-links a::before, .btn::before {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Example icons */
+.icon-home::before { content: "🏠"; color: #0a5fff; }
+.icon-menu::before { content: "🍴"; color: #0a5fff; }
+.icon-contact::before { content: "✉️"; color: #0a5fff; }
+.icon-about::before { content: "ℹ️"; color: #0a5fff; }
+.icon-hours::before { content: "⏰"; color: #0a5fff; }
+.icon-appetizers::before { content: "🥑"; color: #0a5fff; }
+.icon-main::before { content: "🍔"; color: #0a5fff; }
+.icon-desserts::before { content: "🍰"; color: #0a5fff; }
+.icon-beverages::before { content: "🥤"; color: #0a5fff; }
+.icon-soups::before { content: "🍲"; color: #0a5fff; }
+.icon-chowders::before { content: "🥣"; color: #0a5fff; }
+.icon-meatless::before { content: "🍔"; color: #0a5fff; }
+.icon-thankyou::before { content: "🙏"; color: #0a5fff; }
+
+/* Animations */
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+main { animation: fadeInPage 0.6s ease-out both; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Print */
+@media print {
+  .site-header, .site-footer, .site-nav, .btn { display: none !important; }
+  body { background: #fff; color: #000; }
+  a::after { content: " (" attr(href) ")"; }
+}
+
+#header {
+  background-color: #333333;
+  color: #000000;
+  text-align: center;
+  padding: 50px;
+}
